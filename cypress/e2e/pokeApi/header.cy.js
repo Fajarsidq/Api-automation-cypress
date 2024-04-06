@@ -38,13 +38,14 @@ describe('Validate api', () => {
             cy.request('https://pokeapi.co/api/v2/pokemon/bulbasaur').as('bulbasaur')
             cy.get('@bulbasaur').its('body').should('include',{name: "bulbasaur"})
 
-
         })
-        it('Succesfully validate  content', () => {
-            cy.request('https://pokeapi.co/api/v2/pokemon/ditto').as('ditto1')
-            cy.get('@ditto1').its('body').should('include',{name: "bulbasaur"})
 
-
+        it('Successfully update pokemon', () => {
+            cy.request('https://pokeapi.co/api/v2/pokemon/ditto').then(
+                (response) => {
+                expect(response.body.abilities[0].ability.name).to.eq("limber")
+                }
+            )
         })
 
 })
