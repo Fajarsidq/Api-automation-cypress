@@ -1,0 +1,16 @@
+{
+  "name": "educy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "fajar",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "prettier": "^3.2.5"
+  },
+    "script":{
+    "cy:open": "cypress open" ,
+    "cy:run" : "cypress run"
+    }
+
+}

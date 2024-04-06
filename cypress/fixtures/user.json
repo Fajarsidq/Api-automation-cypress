@@ -1,0 +1,7 @@
+{
+  "username": "username",
+  "password": "password",
+  "userToken": "f2bb6180-e8c2-40ba-a454-36fe3505a5ce",
+  "urlWithToken": "https://zero.webappsecurity.com/auth/accept-certs.html?user_token=${userToken}"
+  
+}
