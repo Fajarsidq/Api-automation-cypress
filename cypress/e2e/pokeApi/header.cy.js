@@ -48,4 +48,14 @@ describe('Validate api', () => {
             )
         })
 
+        it('Succesfully validate status negative response', () => {
+            cy.request({
+                method: 'GET',
+                url: 'https://reqres.in/api/v2/pokemon/udin',
+                failOnStatusCode: false
+            }).as('udin')
+            cy.get('@udin').its('status').should('equal',404)
+
+        })
+
 })
